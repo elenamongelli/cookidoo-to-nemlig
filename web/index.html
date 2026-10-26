@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#246348">
+    <title>Shopping Review</title>
+    <link rel="stylesheet" href="/app.css">
+    <script type="module" src="/app.js"></script>
+  </head>
+  <body>
+
+    <main>
+      <div class="workspace">
+        <aside class="input-panel" aria-labelledby="list-title">
+          <div class="panel-title"><h2 id="list-title">Shopping list</h2><span class="step-label">01 / INPUT</span></div>
+          <label class="sr-only" for="shopping-list">Shopping list ingredients</label>
+          <textarea id="shopping-list" spellcheck="false" placeholder="200 g pomodori&#10;2 eggs&#10;500 ml milk"></textarea>
+          <div class="editor-meta"><span id="line-count">0 non-empty lines</span><span id="save-status">Not saved yet</span></div>
+          <div class="list-actions"><button class="button button-secondary" id="empty" type="button" disabled>Empty list</button><button class="button button-primary" id="review" type="button" disabled>Review list <span aria-hidden="true">&#8594;</span></button></div>
+          <p id="input-status" class="input-status" role="status" aria-live="polite">Your list is empty.</p>
+        </aside>
+
+        <section class="review-panel" aria-labelledby="review-title" aria-busy="false" id="review-panel">
+          <div class="panel-title"><h2 id="review-title">Your review</h2><span class="step-label">02 / CHECK</span></div>
+          <div class="summary" aria-label="Review totals">
+            <div><strong id="stat-lines">-</strong><span>ingredients</span></div>
+            <div><strong id="stat-products">-</strong><span>products</span></div>
+            <div class="attention-stat"><strong id="stat-missing">-</strong><span>missing</span></div>
+          </div>
+          <p id="review-notice" class="notice" hidden></p>
+          <p id="error" class="error" role="alert" hidden></p>
+          <div class="review-toolbar">
+            <div class="tabs" role="tablist" aria-label="Review sections">
+              <button id="tab-products" type="button" role="tab" aria-selected="true" aria-controls="results" data-tab="products">Products <span id="count-products">0</span></button>
+              <button id="tab-missing" type="button" role="tab" aria-selected="false" aria-controls="results" tabindex="-1" data-tab="missing">Missing <span id="count-missing">0</span></button>
+            </div>
+            <label class="sr-only" for="search">Search this review</label>
+            <input id="search" class="search" type="search" placeholder="Search review" disabled>
+          </div>
+          <div id="results" class="results" role="tabpanel" aria-labelledby="tab-products" tabindex="0"><div class="empty-state"><span class="empty-symbol" aria-hidden="true">&mdash;</span><h3>Your list is empty</h3><p>No ingredients to review.</p></div></div>
+          <p id="result-count" class="result-count" role="status" aria-live="polite"></p>
+          <footer class="import-bar">
+            <div><p class="eyebrow">03 / TAKE IT TO NEMLIG</p><strong id="import-summary">No reviewed products yet</strong><p>Prices and availability unchecked. Checkout stays with you.</p></div>
+            <div class="import-actions"><button id="copy" class="button button-secondary" type="button" disabled>Copy link</button><button id="open" class="button button-primary" type="button" disabled>Open Nemlig <span aria-hidden="true">&#8599;</span></button></div>
+          </footer>
+        </section>
+      </div>
+
+      <section class="household-panel" aria-labelledby="household-title">
+        <div class="panel-title"><h2 id="household-title">Household supplies</h2><span class="step-label" id="household-date">LOADING</span></div>
+        <p class="household-note">Estimates from your receipts, not measured stock. Answer stock questions with the assistant.</p>
+        <div id="household-list" class="household-list" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <dialog id="import-dialog" aria-labelledby="dialog-title" aria-describedby="dialog-description">
+      <p class="eyebrow">LEAVING YOUR SHOPPING DESK</p><h2 id="dialog-title">Open your Nemlig basket?</h2>
+      <p id="dialog-description">Opening this link can add the reviewed products to your Nemlig basket. Prices and availability have not been checked.</p>
+      <p id="dialog-summary" class="dialog-summary"></p>
+      <div class="dialog-actions"><button id="cancel-open" class="button button-secondary" type="button">Keep reviewing</button><a id="confirm-open" class="button button-primary" target="_blank" rel="noopener noreferrer">Open Nemlig <span aria-hidden="true">&#8599;</span></a></div>
+    </dialog>
+  </body>
+</html>

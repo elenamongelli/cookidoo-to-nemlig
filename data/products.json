@@ -1,0 +1,1378 @@
+{
+  "100160": {
+    "name": "Hvidløg øko. 1 stk.",
+    "rules": {
+      "form": "fresh",
+      "fallbackSku": "5053384",
+      "gramsPerItem": 50,
+      "defaultUnit": "g",
+      "defaultMultiplier": 10
+    },
+    "aliases": {
+      "it": ["aglio", "spicchio d'aglio", "spicchi d'aglio"],
+      "en": ["garlic", "garlic cloves", "garlic clove", "garlic bulb"],
+      "da": ["hvidløg", "hvidløgsfed"],
+      "es": ["ajo", "diente de ajo", "dientes de ajo"]
+    }
+  },
+  "105322": {
+    "name": "Dijon sennep 380 g",
+    "aliases": {
+      "it": ["senape dijon", "senape di digione"],
+      "en": ["dijon", "dijon mustard"],
+      "da": ["dijon sennep", "dijonsennep"],
+      "es": ["mostaza dijon", "mostaza de dijon"]
+    }
+  },
+  "106499": {
+    "name": "Cherrytomater øko. 250 g",
+    "aliases": {
+      "it": [
+        "pomodoro",
+        "pomodori",
+        "pomodorini",
+        "pomodorini ciliegino",
+        "pomodori ciliegino"
+      ],
+      "en": [
+        "tomato",
+        "tomatoes",
+        "cherry tomato",
+        "cherry tomatoes",
+        "plum tomato",
+        "plum tomatoes"
+      ],
+      "da": ["tomat", "tomater", "cherrytomat", "cherrytomater"],
+      "es": ["tomate", "tomates", "tomates cherry"]
+    }
+  },
+  "702008": {
+    "name": "Smørbar (let) 200 g",
+    "aliases": {
+      "it": ["burro", "burro spalmabile", "burro spalmabile light"],
+      "en": ["butter", "spreadable butter", "light butter spread"],
+      "da": ["smør", "smørbar", "smørbar let"]
+    }
+  },
+  "707013": {
+    "name": "Hytteost naturel 1,5% 250 g",
+    "aliases": {
+      "it": ["fiocchi di latte", "fiocchi di latte magri"],
+      "en": ["cottage cheese", "low fat cottage cheese"],
+      "da": ["hytteost", "hytteost naturel"]
+    }
+  },
+  "801005": {
+    "name": "Hakket spinat 450 g",
+    "rules": {
+      "form": "frozen",
+      "allowFresh": true
+    },
+    "aliases": {
+      "it": ["spinaci", "spinaci tritati"],
+      "en": ["spinach", "chopped spinach"],
+      "da": ["spinat", "hakket spinat"],
+      "es": ["espinaca", "espinacas"]
+    }
+  },
+  "801007": {
+    "name": "Ærter (fine) 575 g",
+    "rules": {
+      "form": "frozen"
+    },
+    "aliases": {
+      "it": ["piselli", "piselli verdi"],
+      "en": ["peas", "green peas"],
+      "da": ["ærter", "grønne ærter"],
+      "es": ["guisantes", "guisantes verdes", "arvejas"]
+    }
+  },
+  "922765": {
+    "name": "Blåbær 300 g",
+    "rules": {
+      "form": "frozen",
+      "allowFresh": true
+    },
+    "aliases": {
+      "it": ["mirtillo", "mirtilli"],
+      "en": ["blueberry", "blueberries"],
+      "da": ["blåbær"],
+      "es": ["arándano", "arándanos"]
+    }
+  },
+  "923155": {
+    "name": "Haricots verts 700 g",
+    "rules": {
+      "form": "frozen",
+      "allowFresh": true
+    },
+    "aliases": {
+      "it": ["fagiolini", "fagiolini verdi"],
+      "en": ["green beans", "haricots verts", "french beans"],
+      "da": ["grønne bønner", "haricots verts", "bønner haricots verts"],
+      "es": ["judías verdes", "judias verdes", "ejotes", "habichuelas verdes"]
+    }
+  },
+  "2301101": {
+    "name": "Peberfrugt gul 1 stk.",
+    "rules": {
+      "gramsPerItem": 90
+    },
+    "aliases": {
+      "it": ["peperone giallo", "peperoni gialli"],
+      "en": [
+        "yellow pepper",
+        "yellow peppers",
+        "yellow bell pepper",
+        "yellow bell peppers"
+      ],
+      "da": ["gul peberfrugt", "gule peberfrugter", "peberfrugt gul"]
+    }
+  },
+  "2301103": {
+    "name": "Peberfrugt rød 1 stk.",
+    "rules": {
+      "gramsPerItem": 100
+    },
+    "aliases": {
+      "it": ["peperone rosso", "peperoni rossi", "peperone", "peperoni"],
+      "en": [
+        "red pepper",
+        "red peppers",
+        "red bell pepper",
+        "red bell peppers",
+        "red capsicum",
+        "pepper",
+        "peppers",
+        "bell pepper",
+        "bell peppers",
+        "capsicum"
+      ],
+      "da": [
+        "rød peberfrugt",
+        "røde peberfrugter",
+        "peberfrugt rød",
+        "peberfrugt",
+        "peberfrugter"
+      ],
+      "es": ["pimiento", "pimientos", "pimiento rojo", "pimientos rojos"]
+    }
+  },
+  "2301108": {
+    "name": "Rødløg 1 kg",
+    "rules": {
+      "form": "fresh",
+      "substitutionAliases": [
+        "shallot",
+        "shallots",
+        "scalogno",
+        "scalogni",
+        "brown onion",
+        "brown onions",
+        "chalota",
+        "chalotas",
+        "escalonia",
+        "escalonias",
+        "skalotteløg"
+      ]
+    },
+    "aliases": {
+      "it": [
+        "cipolla",
+        "cipolle",
+        "cipolla rossa",
+        "cipolle rosse",
+        "cipolla bianca",
+        "cipolle bianche",
+        "cipolla dorata",
+        "cipolle dorate",
+        "scalogno",
+        "scalogni"
+      ],
+      "en": [
+        "onion",
+        "onions",
+        "red onion",
+        "red onions",
+        "brown onion",
+        "brown onions",
+        "shallot",
+        "shallots"
+      ],
+      "da": ["løg", "rødløg", "skalotteløg", "gule løg"],
+      "es": [
+        "cebolla",
+        "cebollas",
+        "cebolla roja",
+        "cebollas rojas",
+        "cebolla morada",
+        "cebollas moradas",
+        "cebolla blanca",
+        "cebollas blancas",
+        "chalota",
+        "chalotas",
+        "escalonia",
+        "escalonias"
+      ]
+    }
+  },
+  "2301133": {
+    "name": "Pære Conference 1 stk.",
+    "aliases": {
+      "it": ["pera", "pere", "pera conference"],
+      "en": ["pear", "pears", "conference pear", "conference pears"],
+      "da": ["pære", "pærer", "conference pære"],
+      "es": ["pera", "peras", "pera conferencia"]
+    }
+  },
+  "2301138": {
+    "name": "Banan 1 stk.",
+    "rules": {
+      "gramsPerItem": 100
+    },
+    "aliases": {
+      "it": ["banana", "banane"],
+      "en": ["banana", "bananas"],
+      "da": ["banan", "bananer"],
+      "es": ["plátano", "plátanos", "banana", "bananas"]
+    }
+  },
+  "2301197": {
+    "name": "Æble Royal Gala 1 stk.",
+    "aliases": {
+      "it": ["mela", "mele", "mela royal gala", "mele royal gala"],
+      "en": ["apple", "apples", "royal gala apple", "royal gala apples"],
+      "da": ["æble", "æbler", "royal gala æble", "royal gala æbler"],
+      "es": ["manzana", "manzanas"]
+    }
+  },
+  "2301199": {
+    "name": "Agurk 1 stk.",
+    "rules": {
+      "form": "fresh",
+      "gramsPerItem": 350
+    },
+    "aliases": {
+      "it": ["cetriolo", "cetrioli"],
+      "en": ["cucumber", "cucumbers"],
+      "da": ["agurk", "agurker"],
+      "es": ["pepino", "pepinos"]
+    }
+  },
+  "5001628": {
+    "name": "Minimajs 100 g",
+    "rules": {
+      "form": "fresh"
+    },
+    "aliases": {
+      "it": ["mais baby", "mini mais"],
+      "en": ["baby corn", "baby corns"],
+      "da": ["minimajs", "babymajs"],
+      "es": ["maíz baby", "mini maíz"]
+    }
+  },
+  "5001729": {
+    "name": "Citrongræs 50 g",
+    "rules": {
+      "form": "fresh"
+    },
+    "aliases": {
+      "it": ["citronella"],
+      "en": ["lemongrass", "stalks lemongrass", "stalks fresh lemongrass"],
+      "da": ["citrongræs"],
+      "es": ["hierba limón", "limoncillo"]
+    },
+    "pack": {
+      "amount": 3,
+      "unit": "count"
+    }
+  },
+  "5002527": {
+    "name": "Gulerødder snack øko. 250 g",
+    "aliases": {
+      "it": ["carota", "carote", "carote snack"],
+      "en": ["carrot", "carrots", "snack carrots"],
+      "da": ["gulerod", "gulerødder", "snackgulerødder"],
+      "es": ["zanahoria", "zanahorias"]
+    }
+  },
+  "5002545": {
+    "name": "Aubergine øko. 1 stk.",
+    "aliases": {
+      "it": ["melanzana", "melanzane"],
+      "en": ["aubergine", "aubergines", "eggplant", "eggplants"],
+      "da": ["aubergine", "auberginer"],
+      "es": ["berenjena", "berenjenas"]
+    },
+    "rules": {
+      "gramsPerItem": 300
+    }
+  },
+  "5004946": {
+    "name": "Chili rød øko. 1 stk.",
+    "rules": {
+      "form": "fresh"
+    },
+    "aliases": {
+      "it": ["peperoncino", "peperoncini", "peperoncino rosso"],
+      "en": [
+        "chilli",
+        "chillies",
+        "chili",
+        "chilis",
+        "red chilli",
+        "red chillies"
+      ],
+      "da": ["chili", "rød chili"],
+      "es": ["chile", "chile rojo", "guindilla", "guindilla roja"]
+    }
+  },
+  "5005499": {
+    "name": "Grønkål øko. 300 g",
+    "rules": {
+      "form": "fresh"
+    },
+    "aliases": {
+      "it": ["cavolo riccio", "cavolo kale", "kale"],
+      "en": ["kale"],
+      "da": ["grønkål"],
+      "es": ["col rizada", "col kale", "kale"]
+    }
+  },
+  "5006405": {
+    "name": "Bagekartofler 2 kg",
+    "aliases": {
+      "it": ["patata", "patate", "patate da forno"],
+      "en": ["potato", "potatoes", "baking potatoes"],
+      "da": ["kartoffel", "kartofler", "bagekartoffel", "bagekartofler"],
+      "es": ["patata", "patatas", "papa", "papas"]
+    }
+  },
+  "5007029": {
+    "name": "Bacon i tern 150 g",
+    "aliases": {
+      "it": ["guanciale", "pancetta"],
+      "en": ["bacon", "diced bacon"],
+      "da": ["bacon", "bacon i tern"],
+      "es": ["beicon", "panceta"]
+    }
+  },
+  "5008330": {
+    "name": "Grøntsagsfond 4 x 28 g",
+    "rules": {
+      "preparedYieldMl": 2000
+    },
+    "aliases": {
+      "it": [
+        "fumetto di pesce",
+        "brodo di pesce",
+        "brodo vegetale",
+        "dado per brodo vegetale",
+        "dado vegetale"
+      ],
+      "en": [
+        "fish stock",
+        "fish fumet",
+        "fish broth",
+        "vegetable stock",
+        "vegetable stock cube",
+        "vegetable bouillon cube"
+      ],
+      "da": [
+        "fiskefond",
+        "grøntsagsfond",
+        "grøntsagsbouillon",
+        "grøntsagsbouillonterning"
+      ],
+      "es": [
+        "fumet de pescado",
+        "caldo de pescado",
+        "caldo de verduras",
+        "pastilla de caldo de verduras"
+      ]
+    }
+  },
+  "5010800": {
+    "name": "Champignon 500 g",
+    "rules": {
+      "form": "fresh",
+      "allowDried": true
+    },
+    "aliases": {
+      "it": [
+        "champignon",
+        "funghi champignon",
+        "funghi secchi",
+        "funghi porcini secchi"
+      ],
+      "en": [
+        "champignon",
+        "champignons",
+        "button mushrooms",
+        "dried mushrooms",
+        "dried porcini"
+      ],
+      "da": ["champignon", "tørrede svampe", "tørrede karl johan svampe"],
+      "es": [
+        "champiñón",
+        "champiñones",
+        "setas secas",
+        "hongos secos",
+        "porcini secos"
+      ]
+    }
+  },
+  "5011225": {
+    "name": "Skyr naturel 0,2% 1 kg",
+    "aliases": {
+      "it": ["yogurt", "yogurt naturale", "skyr", "yogurt greco"],
+      "en": [
+        "yogurt",
+        "yoghurt",
+        "natural yogurt",
+        "plain yogurt",
+        "natural yoghurt",
+        "plain yoghurt",
+        "skyr",
+        "greek yogurt",
+        "greek yoghurt"
+      ],
+      "da": [
+        "yoghurt",
+        "yoghurt naturel",
+        "skyr",
+        "skyr naturel",
+        "græsk yoghurt"
+      ],
+      "es": ["yogur", "yogur natural", "yogurt natural", "skyr", "yogur griego"]
+    }
+  },
+  "5012283": {
+    "name": "Porrer 3 stk.",
+    "aliases": {
+      "it": ["porro", "porri"],
+      "en": ["leek", "leeks"],
+      "da": ["porre", "porrer"],
+      "es": ["puerro", "puerros"]
+    }
+  },
+  "5012402": {
+    "name": "Koriander 50 g",
+    "rules": {
+      "form": "fresh"
+    },
+    "aliases": {
+      "it": ["coriandolo", "coriandolo fresco"],
+      "en": ["coriander", "fresh coriander", "cilantro"],
+      "da": ["koriander", "frisk koriander"],
+      "es": ["cilantro", "cilantro fresco", "coriandro fresco"]
+    }
+  },
+  "5012894": {
+    "name": "Purløg 20 g",
+    "aliases": {
+      "it": ["erba cipollina"],
+      "en": ["chives"],
+      "da": ["purløg"]
+    }
+  },
+  "5013728": {
+    "name": "Fiskesauce 0,20 l",
+    "aliases": {
+      "it": ["salsa di pesce"],
+      "en": ["fish sauce"],
+      "da": ["fiskesauce"]
+    }
+  },
+  "5013957": {
+    "name": "Quinoa (rød) øko. 350 g",
+    "aliases": {
+      "it": ["quinoa", "quinoa rossa"],
+      "en": ["quinoa", "red quinoa"],
+      "da": ["quinoa", "rød quinoa"]
+    }
+  },
+  "5016563": {
+    "name": "Jalapenos (hot) 50 g",
+    "rules": {
+      "form": "fresh"
+    },
+    "aliases": {
+      "it": ["jalapeno", "peperoncino verde", "peperoncini verdi"],
+      "en": [
+        "jalapeno",
+        "jalapenos",
+        "jalapeño",
+        "jalapeños",
+        "green chilli",
+        "green chillies",
+        "green chili",
+        "green chilis"
+      ],
+      "da": ["jalapeno", "jalapenos", "grøn chili", "grønne chilier"],
+      "es": ["jalapeño", "jalapeños", "chile verde", "chiles verdes"]
+    }
+  },
+  "5018685": {
+    "name": "Østershatte øko. 150 g",
+    "aliases": {
+      "it": ["funghi", "pleurotus", "funghi ostrica"],
+      "en": ["mushroom", "mushrooms", "oyster mushroom", "oyster mushrooms"],
+      "da": ["svampe", "østershat", "østershatte"]
+    }
+  },
+  "5019859": {
+    "name": "Letmælk 1,5% 1 l",
+    "rules": {
+      "defaultUnit": "ml",
+      "defaultMultiplier": 1000
+    },
+    "aliases": {
+      "it": ["latte", "latte parzialmente scremato"],
+      "en": ["milk", "semi skimmed milk", "semi-skimmed milk"],
+      "da": ["mælk", "letmælk"],
+      "es": ["leche", "leche semidesnatada"]
+    }
+  },
+  "5027931": {
+    "name": "Basilikum Grøn øko. 10,5 cm pt.",
+    "pack": {
+      "amount": 1,
+      "unit": "count"
+    },
+    "rules": {
+      "form": "fresh"
+    },
+    "aliases": {
+      "it": ["basilico"],
+      "en": ["basil", "basil plant", "green basil"],
+      "da": ["basilikum", "grøn basilikum"],
+      "es": ["albahaca"]
+    }
+  },
+  "5027935": {
+    "name": "Timian øko. 10,5 cm pt.",
+    "pack": {
+      "amount": 1,
+      "unit": "count"
+    },
+    "rules": {
+      "form": "fresh"
+    },
+    "aliases": {
+      "it": ["timo"],
+      "en": ["thyme", "thyme plant"],
+      "da": ["timian"],
+      "es": ["tomillo"]
+    }
+  },
+  "5029778": {
+    "name": "Courgette / squash øko. 1 stk.",
+    "rules": {
+      "form": "fresh",
+      "gramsPerItem": 350
+    },
+    "aliases": {
+      "it": ["zucchina", "zucchine"],
+      "en": ["zucchini", "zucchinis", "courgette", "courgettes"],
+      "da": ["courgette", "courgetter", "squash"],
+      "es": ["calabacín", "calabacines"]
+    }
+  },
+  "5030750": {
+    "name": "Serrano Reserva Consortio 60 g",
+    "aliases": {
+      "it": ["prosciutto crudo", "prosciutto serrano", "serrano"],
+      "en": ["serrano", "serrano ham", "serrano reserva"],
+      "da": [
+        "serrano",
+        "serranoskinke",
+        "serrano skinke",
+        "serrano reserva consortio"
+      ]
+    }
+  },
+  "5034904": {
+    "name": "Chilipulver 41 g",
+    "aliases": {
+      "it": ["peperoncino in polvere", "peperoncino kashmiri in polvere"],
+      "en": [
+        "chilli powder",
+        "chili powder",
+        "kashmiri chilli powder",
+        "kashmiri chili powder"
+      ],
+      "da": ["chilipulver", "stødt chili"],
+      "es": ["chile en polvo", "chili en polvo", "chile de cachemira en polvo"]
+    }
+  },
+  "5034913": {
+    "name": "Koriander (stødt) 28 g",
+    "aliases": {
+      "it": ["coriandolo macinato", "coriandolo in polvere"],
+      "en": ["ground coriander"],
+      "da": ["stødt koriander", "koriander stødt"],
+      "es": ["cilantro molido", "coriandro molido", "coriandro en polvo"]
+    }
+  },
+  "5034919": {
+    "name": "Paprika 37 g",
+    "aliases": {
+      "it": ["paprika", "paprica"],
+      "en": ["paprika"],
+      "da": ["paprika"],
+      "es": ["pimentón", "pimenton", "paprika"]
+    }
+  },
+  "5034927": {
+    "name": "Garam masala 33 g",
+    "aliases": {
+      "it": ["garam masala"],
+      "en": ["garam masala"],
+      "da": ["garam masala"],
+      "es": ["garam masala"]
+    }
+  },
+  "5037201": {
+    "name": "Specialbrød m. chiafrø 300 g",
+    "pack": {
+      "amount": 1,
+      "unit": "count"
+    },
+    "aliases": {
+      "it": ["pane senza glutine"],
+      "en": ["gluten free bread", "gluten-free bread"],
+      "da": ["glutenfri brød", "glutenfrit brød", "specialbrød"],
+      "es": ["pan sin gluten"]
+    }
+  },
+  "5041946": {
+    "name": "Appelsinjuice 0,85 l",
+    "aliases": {
+      "it": ["succo d'arancia", "succo di arancia"],
+      "en": ["orange juice"],
+      "da": ["appelsinjuice"],
+      "es": ["zumo de naranja", "jugo de naranja"]
+    }
+  },
+  "5043420": {
+    "name": "Bladselleri øko. 1 bdt.",
+    "pack": {
+      "amount": 1,
+      "unit": "count"
+    },
+    "rules": {
+      "form": "fresh"
+    },
+    "aliases": {
+      "it": ["sedano", "gambo di sedano", "gambi di sedano"],
+      "en": ["celery", "celery stalk", "celery stalks"],
+      "da": ["bladselleri", "selleristilk", "selleristilke"],
+      "es": ["apio", "tallo de apio", "tallos de apio"]
+    }
+  },
+  "5043540": {
+    "name": "Cannellini beans øko. 400 g",
+    "aliases": {
+      "it": ["fagioli cannellini", "cannellini", "fagioli bianchi"],
+      "en": ["cannellini beans", "white beans"],
+      "da": ["cannellinibønner", "cannellini bønner", "hvide bønner"]
+    }
+  },
+  "5043543": {
+    "name": "Grønne linser øko. 400 g",
+    "aliases": {
+      "it": ["lenticchie", "lenticchie verdi"],
+      "en": ["lentils", "green lentils"],
+      "da": ["linser", "grønne linser"]
+    }
+  },
+  "5043732": {
+    "name": "Avocado formodnet 3 stk.",
+    "rules": {
+      "form": "fresh"
+    },
+    "aliases": {
+      "it": ["avocado", "avocado maturo", "avocado maturi"],
+      "en": ["avocado", "avocados", "ripe avocado", "ripe avocados"],
+      "da": ["avocado", "avocadoer", "moden avocado", "formodnet avocado"],
+      "es": ["aguacate", "aguacates", "palta", "paltas"]
+    }
+  },
+  "5044360": {
+    "name": "Ingefær i tern 250 g",
+    "aliases": {
+      "it": ["zenzero", "zenzero a cubetti"],
+      "en": ["ginger", "diced ginger"],
+      "da": ["ingefær", "ingefær i tern"]
+    }
+  },
+  "5046333": {
+    "name": "Lakseportioner m. skind 225 g",
+    "rules": {
+      "form": "fresh",
+      "skinOnAllowed": true,
+      "gramsPerItem": 150
+    },
+    "aliases": {
+      "it": [
+        "salmone",
+        "filetti di salmone",
+        "filetti di salmone freschi senza pelle"
+      ],
+      "en": [
+        "salmon",
+        "salmon fillets",
+        "salmon fillets skinless",
+        "skinless salmon fillets"
+      ],
+      "da": [
+        "laks",
+        "laksefilet",
+        "lakseportioner",
+        "laks med skind",
+        "laks uden skind"
+      ],
+      "es": ["salmón", "filetes de salmón", "salmón sin piel"]
+    }
+  },
+  "5047006": {
+    "name": "Safran 0,5 g",
+    "aliases": {
+      "it": ["zafferano", "pistilli di zafferano"],
+      "en": ["saffron", "saffron threads"],
+      "da": ["safran", "safrantråde"],
+      "es": ["azafrán", "hebras de azafrán"]
+    }
+  },
+  "5047224": {
+    "name": "Limesaft øko. 0,25 l",
+    "aliases": {
+      "it": [
+        "limone",
+        "limoni",
+        "lime",
+        "succo di limone",
+        "succo di lime",
+        "scorza di limone",
+        "scorza di lime",
+        "fette di limone",
+        "fette di lime"
+      ],
+      "en": [
+        "lemon",
+        "lemons",
+        "lime",
+        "limes",
+        "lemon juice",
+        "lime juice",
+        "lemon zest",
+        "lime zest",
+        "lemon slices",
+        "lime slices",
+        "slices of lemon",
+        "slices of lime"
+      ],
+      "da": [
+        "citron",
+        "citroner",
+        "lime",
+        "citronsaft",
+        "limesaft",
+        "citronskal",
+        "limeskal",
+        "citronskiver",
+        "limeskiver"
+      ],
+      "es": [
+        "limón",
+        "limones",
+        "lima",
+        "limas",
+        "zumo de limón",
+        "zumo de lima",
+        "jugo de limón",
+        "jugo de lima",
+        "ralladura de limón",
+        "ralladura de lima",
+        "rodajas de limón",
+        "rodajas de lima"
+      ]
+    }
+  },
+  "5049646": {
+    "name": "Gurkemeje øko. 5 g",
+    "aliases": {
+      "it": ["curcuma", "curcuma in polvere"],
+      "en": ["turmeric", "ground turmeric"],
+      "da": ["gurkemeje", "stødt gurkemeje"],
+      "es": ["cúrcuma", "cúrcuma molida"]
+    }
+  },
+  "5050278": {
+    "name": "Isterninger 2 kg",
+    "rules": {
+      "form": "frozen"
+    },
+    "aliases": {
+      "it": ["ghiaccio", "cubetti di ghiaccio"],
+      "en": ["ice", "ice cubes", "ice cube"],
+      "da": ["isterninger", "isterning"],
+      "es": ["hielo", "cubitos de hielo", "cubos de hielo"]
+    }
+  },
+  "5051156": {
+    "name": "Sort peber (hel) 100 g",
+    "aliases": {
+      "it": ["pepe nero in grani", "grani di pepe nero"],
+      "en": ["black peppercorns", "black peppercorn", "whole black pepper"],
+      "da": ["sort peber hel", "hele sorte peberkorn", "sorte peberkorn"],
+      "es": ["pimienta negra en grano", "granos de pimienta negra"]
+    }
+  },
+  "5051157": {
+    "name": "Sort peber (stødt) 100 g",
+    "aliases": {
+      "it": ["pepe nero macinato"],
+      "en": ["ground black pepper", "black pepper ground"],
+      "da": ["sort peber stødt", "stødt sort peber"],
+      "es": ["pimienta negra molida"]
+    }
+  },
+  "5051480": {
+    "name": "Kokosvand 0,50 l",
+    "aliases": {
+      "it": ["acqua di cocco"],
+      "en": ["coconut water"],
+      "da": ["kokosvand"],
+      "es": ["agua de coco"]
+    }
+  },
+  "5051800": {
+    "name": "Havregryn (grovvalsede) øko. 1 kg",
+    "aliases": {
+      "it": ["avena", "fiocchi d'avena", "fiocchi di avena"],
+      "en": ["oats", "rolled oats", "coarse rolled oats"],
+      "da": ["havregryn", "grovvalsede havregryn"]
+    }
+  },
+  "5052676": {
+    "name": "Blåmuslinger 1 kg",
+    "rules": {
+      "form": "fresh"
+    },
+    "aliases": {
+      "it": ["cozze", "cozze fresche pulite"],
+      "en": ["mussels", "cleaned mussels", "fresh cleaned mussels"],
+      "da": ["blåmuslinger", "muslinger"],
+      "es": ["mejillón", "mejillones", "mejillones frescos limpios"]
+    }
+  },
+  "5053034": {
+    "name": "Skyr naturel 0,2% 1 kg",
+    "aliases": {
+      "it": ["yogurt", "yogurt naturale", "skyr"],
+      "en": [
+        "yogurt",
+        "yoghurt",
+        "natural yogurt",
+        "plain yogurt",
+        "natural yoghurt",
+        "plain yoghurt",
+        "skyr"
+      ],
+      "da": ["yoghurt", "yoghurt naturel", "skyr", "skyr naturel"],
+      "es": ["yogur", "yogur natural", "yogurt natural", "skyr"]
+    }
+  },
+  "5053384": {
+    "name": "Hvidløg i net 200 g",
+    "rules": {
+      "form": "fresh"
+    },
+    "aliases": {
+      "it": ["aglio in rete"],
+      "en": ["netted garlic", "garlic in a net"],
+      "da": ["hvidløg i net"],
+      "es": ["ajo en malla"]
+    }
+  },
+  "5055532": {
+    "name": "Blåbær øko. 200 g",
+    "aliases": {
+      "it": ["mirtillo", "mirtilli"],
+      "en": ["blueberry", "blueberries"],
+      "da": ["blåbær", "økologiske blåbær"],
+      "es": ["arándano", "arándanos"]
+    }
+  },
+  "5055608": {
+    "name": "Spidskommen 90 g",
+    "aliases": {
+      "it": ["cumino", "cumino macinato"],
+      "en": ["cumin", "ground cumin"],
+      "da": ["spidskommen", "stødt spidskommen"],
+      "es": ["comino", "comino molido"]
+    }
+  },
+  "5055609": {
+    "name": "Cayennepeber 50 g",
+    "aliases": {
+      "it": ["pepe di cayenna", "peperoncino di cayenna"],
+      "en": ["cayenne", "cayenne pepper"],
+      "da": ["cayennepeber"],
+      "es": ["pimienta de cayena", "cayena"]
+    }
+  },
+  "5056006": {
+    "name": "Hvidvinseddike øko. 25 g",
+    "aliases": {
+      "it": ["aceto di vino bianco"],
+      "en": ["white wine vinegar"],
+      "da": ["hvidvinseddike"],
+      "es": ["vinagre de vino blanco"]
+    }
+  },
+  "5056391": {
+    "name": "Kyllingebrystfilet 550 g",
+    "aliases": {
+      "it": ["pollo", "petto di pollo", "filetto di petto di pollo"],
+      "en": [
+        "chicken",
+        "chicken breast",
+        "chicken breasts",
+        "chicken breast fillet"
+      ],
+      "da": ["kylling", "kyllingebryst", "kyllingebrystfilet"]
+    }
+  },
+  "5059016": {
+    "name": "Kartofler Vaskede 1 kg",
+    "aliases": {
+      "it": ["patata", "patate"],
+      "en": ["potato", "potatoes"],
+      "da": ["kartoffel", "kartofler", "vaskede kartofler"],
+      "es": ["patata", "patatas", "papa", "papas"]
+    }
+  },
+  "5060221": {
+    "name": "Stenovnsbagte manitobabolle 6 stk.",
+    "aliases": {
+      "it": ["panino", "panini", "panini manitoba"],
+      "en": ["bread roll", "bread rolls", "manitoba rolls"],
+      "da": ["bolle", "boller", "manitobabolle", "manitobaboller"]
+    }
+  },
+  "5060433": {
+    "name": "Rød karrypasta 110 g",
+    "aliases": {
+      "it": ["pasta di curry rosso", "pasta di curry rossa"],
+      "en": ["red curry paste"],
+      "da": ["rød karrypasta"]
+    }
+  },
+  "5060560": {
+    "name": "Grønlandske rejer (store) 300 g",
+    "rules": {
+      "form": "frozen"
+    },
+    "aliases": {
+      "it": ["gamberi", "gamberetti", "gamberi della groenlandia"],
+      "en": ["shrimp", "prawns", "greenland prawns"],
+      "da": ["rejer", "grønlandske rejer", "store rejer"],
+      "es": ["gambones", "gambas", "camarones"]
+    }
+  },
+  "5060611": {
+    "5053034": {
+      "name": "Skyr naturel 0,2% 1 kg",
+      "aliases": {
+        "it": ["yogurt", "yogurt naturale", "skyr"],
+        "en": [
+          "yogurt",
+          "yoghurt",
+          "natural yogurt",
+          "plain yogurt",
+          "natural yoghurt",
+          "plain yoghurt",
+          "skyr"
+        ],
+        "da": ["yoghurt", "yoghurt naturel", "skyr", "skyr naturel"],
+        "es": ["yogur", "yogur natural", "yogurt natural", "skyr"]
+      }
+    },
+    "name": "Broccoli buketter øko. 400 g",
+    "rules": {
+      "form": "frozen",
+      "allowFresh": true
+    },
+    "aliases": {
+      "it": ["broccoli", "cimette di broccoli"],
+      "en": ["broccoli", "broccoli florets"],
+      "da": ["broccoli", "broccoli buketter"],
+      "es": ["brócoli", "brocoli"]
+    }
+  },
+  "5060793": {
+    "name": "Alternativ t. madlavningsfløde 0,33 l",
+    "aliases": {
+      "it": ["panna da cucina"],
+      "en": ["cooking cream", "single cream", "cream for cooking"],
+      "da": [
+        "madlavningsfløde",
+        "alternativ til madlavningsfløde",
+        "alternativ t madlavningsfløde"
+      ],
+      "es": ["nata para cocinar", "crema para cocinar", "crema de cocina"]
+    }
+  },
+  "5061370": {
+    "name": "Laksestykke m. skind 600 g",
+    "rules": {
+      "form": "fresh",
+      "gramsPerItem": 150,
+      "skinOnAllowed": true,
+      "previouslyFrozen": true
+    },
+    "aliases": {
+      "it": [
+        "salmone",
+        "filetti di salmone",
+        "filetti di salmone freschi senza pelle"
+      ],
+      "en": [
+        "salmon",
+        "salmon fillets",
+        "salmon fillets skinless",
+        "skinless salmon fillets"
+      ],
+      "da": [
+        "laks",
+        "laksefilet",
+        "lakseportioner",
+        "laks med skind",
+        "laks uden skind"
+      ],
+      "es": ["salmón", "filetes de salmón", "salmón sin piel"]
+    }
+  },
+  "5062103": {
+    "name": "Tranebær 100 g",
+    "rules": {
+      "form": "dried"
+    },
+    "aliases": {
+      "it": ["mirtilli rossi", "cranberry", "cranberries"],
+      "en": ["cranberry", "cranberries"],
+      "da": ["tranebær"],
+      "es": ["arándano rojo", "arándanos rojos"]
+    }
+  },
+  "5062609": {
+    "name": "Græskarkerner 250 g",
+    "aliases": {
+      "it": ["semi di zucca"],
+      "en": ["pumpkin seeds", "pumpkin seed"],
+      "da": ["græskarkerner"],
+      "es": ["semillas de calabaza", "pipas de calabaza"]
+    }
+  },
+  "5062611": {
+    "name": "Hørfrø 250 g",
+    "aliases": {
+      "it": ["semi di lino"],
+      "en": ["flaxseed", "flaxseeds", "flax seeds", "linseed", "linseeds"],
+      "da": ["hørfrø"],
+      "es": ["semillas de lino", "semillas de linaza", "linaza"]
+    }
+  },
+  "5064676": {
+    "name": "Grana Padano 200 g",
+    "aliases": {
+      "it": [
+        "grana padano",
+        "parmigiano reggiano",
+        "parmigiano",
+        "formaggio duro"
+      ],
+      "en": [
+        "grana padano",
+        "parmigiano reggiano",
+        "parmesan",
+        "parmesan cheese",
+        "hard cheese"
+      ],
+      "da": [
+        "grana padano",
+        "parmigiano reggiano",
+        "parmesan",
+        "parmesanost",
+        "hård ost"
+      ],
+      "es": [
+        "grana padano",
+        "parmigiano reggiano",
+        "parmesano",
+        "queso parmesano",
+        "queso duro"
+      ]
+    }
+  },
+  "5064707": {
+    "name": "Parboiled ris 1 kg",
+    "aliases": {
+      "it": ["riso", "riso parboiled"],
+      "en": ["rice", "parboiled rice"],
+      "da": ["ris", "parboiled ris"],
+      "es": ["arroz", "arroz vaporizado", "arroz de grano redondo"]
+    }
+  },
+  "5065466": {
+    "name": "Appelsinjuice øko. 0,75 l",
+    "rules": {
+      "coldPressed": true,
+      "fromConcentrate": false
+    },
+    "aliases": {
+      "it": ["succo d'arancia", "succo di arancia"],
+      "en": ["orange juice", "cold pressed orange juice"],
+      "da": ["appelsinjuice", "koldpresset appelsinjuice"],
+      "es": ["zumo de naranja", "jugo de naranja"]
+    }
+  },
+  "5066312": {
+    "name": "Parmigiano Reggiano 200 g",
+    "aliases": {
+      "it": ["parmigiano reggiano", "parmigiano", "formaggio duro"],
+      "en": [
+        "parmigiano reggiano",
+        "parmesan",
+        "parmesan cheese",
+        "hard cheese"
+      ],
+      "da": ["parmigiano reggiano", "parmesan", "parmesanost", "hård ost"],
+      "es": [
+        "parmigiano reggiano",
+        "parmesano",
+        "queso parmesano",
+        "queso duro"
+      ]
+    }
+  },
+  "5066376": {
+    "name": "Hakkede tomater 400 g",
+    "rules": {
+      "form": "canned"
+    },
+    "aliases": {
+      "it": ["pomodori in scatola", "pomodori tritati", "pomodori a pezzi"],
+      "en": [
+        "canned tomatoes",
+        "tinned tomatoes",
+        "canned crushed tomatoes",
+        "canned chopped tomatoes",
+        "chopped tomatoes",
+        "crushed tomatoes"
+      ],
+      "da": ["hakkede tomater", "tomater på dåse", "konservestomater"],
+      "es": [
+        "tomate triturado en conserva",
+        "tomate triturado",
+        "tomates en conserva",
+        "tomate en conserva",
+        "tomates en lata"
+      ]
+    }
+  },
+  "5066557": {
+    "name": "Køkkenrulle 4 rl.",
+    "aliases": {
+      "it": ["carta da cucina", "rotoli da cucina"],
+      "en": ["kitchen roll", "kitchen rolls", "paper towel", "paper towels"],
+      "da": ["køkkenrulle", "køkkenruller"]
+    }
+  },
+  "5067098": {
+    "name": "Salatost i tern 3% 410 g",
+    "pack": {
+      "amount": 200,
+      "unit": "g"
+    },
+    "aliases": {
+      "it": [
+        "formaggio da insalata",
+        "formaggio da insalata a cubetti",
+        "feta"
+      ],
+      "en": ["salad cheese", "salad cheese cubes", "feta", "feta cheese"],
+      "da": ["salatost", "salatost i tern", "feta", "fetaost"],
+      "es": ["feta", "queso feta"]
+    }
+  },
+  "5067718": {
+    "name": "Druer Autumncrisp 1 kg",
+    "aliases": {
+      "it": ["uva", "uva autumncrisp"],
+      "en": ["grape", "grapes", "autumncrisp grapes"],
+      "da": ["drue", "druer", "vindruer", "autumncrisp druer"]
+    }
+  },
+  "5069793": {
+    "name": "Risnudler 200 g",
+    "aliases": {
+      "it": ["spaghetti di riso", "noodles di riso", "vermicelli di riso"],
+      "en": ["rice noodles"],
+      "da": ["risnudler"]
+    }
+  },
+  "5070217": {
+    "name": "Bøf af oksemørbrad 125 g",
+    "aliases": {
+      "it": ["filetto di manzo", "lombata di manzo"],
+      "en": ["beef tenderloin", "beef fillet"],
+      "da": ["oksemørbrad", "bøf af oksemørbrad"],
+      "es": ["solomillo de ternera", "solomillo de vacuno"]
+    }
+  },
+  "5071552": {
+    "name": "Monster Ultra White (dåse) 8 x 0,50 l",
+    "aliases": {
+      "it": ["monster", "monster ultra white", "bevanda energetica"],
+      "en": ["monster", "monster ultra white", "energy drink", "energy drinks"],
+      "da": ["monster", "monster ultra white", "energidrik", "energidrikke"]
+    }
+  },
+  "5601187": {
+    "name": "Toiletpapir 6 rl.",
+    "aliases": {
+      "it": ["carta igienica"],
+      "en": ["toilet paper", "toilet roll", "toilet rolls"],
+      "da": ["toiletpapir"]
+    }
+  },
+  "5602181": {
+    "name": "Laksefilet m. skind 600 g",
+    "rules": {
+      "form": "fresh",
+      "gramsPerItem": 150,
+      "skinOnAllowed": true,
+      "previouslyFrozen": true
+    },
+    "aliases": {
+      "it": [
+        "salmone",
+        "filetti di salmone",
+        "filetti di salmone freschi senza pelle"
+      ],
+      "en": [
+        "salmon",
+        "salmon fillets",
+        "salmon fillets skinless",
+        "skinless salmon fillets"
+      ],
+      "da": [
+        "laks",
+        "laksefilet",
+        "lakseportioner",
+        "laks med skind",
+        "laks uden skind"
+      ],
+      "es": ["salmón", "filetes de salmón", "salmón sin piel"]
+    }
+  },
+  "5602312": {
+    "name": "Tomatpuré 140 g",
+    "aliases": {
+      "it": ["concentrato di pomodoro", "doppio concentrato di pomodoro"],
+      "en": [
+        "tomato puree",
+        "tomato purée",
+        "tomato paste",
+        "concentrated tomato puree"
+      ],
+      "da": ["tomatpuré", "tomatpure", "tomatkoncentrat"],
+      "es": ["concentrado de tomate", "pasta de tomate", "puré de tomate"]
+    }
+  },
+  "5602504": {
+    "name": "Salt m. jod (fint) 1 kg",
+    "aliases": {
+      "it": [
+        "sale",
+        "sale fino",
+        "sale iodato",
+        "sale marino",
+        "sale marino fino",
+        "sale grosso"
+      ],
+      "en": [
+        "salt",
+        "fine salt",
+        "iodized salt",
+        "fine iodized salt",
+        "sea salt",
+        "fine sea salt",
+        "coarse salt",
+        "coarse sea salt"
+      ],
+      "da": [
+        "salt",
+        "fint salt",
+        "salt med jod",
+        "salt m jod",
+        "havsalt",
+        "fint havsalt",
+        "groft salt",
+        "groft havsalt"
+      ],
+      "es": [
+        "sal",
+        "sal fina",
+        "sal yodada",
+        "sal marina",
+        "sal marina fina",
+        "sal gorda",
+        "sal gruesa"
+      ]
+    }
+  },
+  "5602879": {
+    "name": "Frilandsæg str. M/L 8 stk.",
+    "aliases": {
+      "it": ["uovo", "uova", "uova da allevamento all'aperto"],
+      "en": ["egg", "eggs", "free range eggs", "free-range eggs"],
+      "da": ["æg", "frilandsæg"],
+      "es": ["huevo", "huevos"]
+    }
+  },
+  "5603865": {
+    "name": "Jasminris 1 kg",
+    "aliases": {
+      "it": ["riso", "riso jasmine", "riso gelsomino"],
+      "en": ["rice", "jasmine rice"],
+      "da": ["ris", "jasminris"],
+      "es": ["arroz", "arroz jazmín", "arroz de grano redondo"]
+    }
+  },
+  "5605127": {
+    "name": "Kokosmælk 5-7% 0,40 l",
+    "aliases": {
+      "it": ["latte di cocco", "latte di cocco light"],
+      "en": ["coconut milk", "light coconut milk"],
+      "da": ["kokosmælk", "let kokosmælk"]
+    }
+  },
+  "5605324": {
+    "name": "Mango i tern 250 g",
+    "rules": {
+      "form": "frozen",
+      "allowFresh": true
+    },
+    "aliases": {
+      "it": ["mango", "mango a cubetti"],
+      "en": ["mango", "diced mango"],
+      "da": ["mango", "mango i tern"],
+      "es": ["mango", "mangos"]
+    }
+  }
+}

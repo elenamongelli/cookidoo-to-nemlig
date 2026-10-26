@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "items": [
+    {
+      "id": "toilet-paper",
+      "name": "toilet paper",
+      "skus": ["5601187"],
+      "aliases": ["toiletpapir", "toilet paper", "carta igienica"],
+      "interval": { "amount": 14, "unit": "days" },
+      "bufferDays": 7,
+      "offerCheckEveryDays": 7
+    },
+    {
+      "id": "dish-soap",
+      "name": "dish soap",
+      "skus": [],
+      "aliases": [
+        "opvaskemiddel",
+        "dish soap",
+        "washing up liquid",
+        "detersivo per piatti"
+      ],
+      "interval": { "amount": 2, "unit": "months" },
+      "bufferDays": 7,
+      "offerCheckEveryDays": 7
+    },
+    {
+      "id": "kitchen-roll",
+      "name": "kitchen roll",
+      "skus": ["5066557"],
+      "aliases": ["køkkenrulle", "kitchen roll", "paper towels", "scottex"],
+      "interval": null,
+      "bufferDays": 7,
+      "offerCheckEveryDays": 7
+    }
+  ]
+}
