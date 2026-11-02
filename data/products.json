@@ -32,7 +32,8 @@
         "pomodori",
         "pomodorini",
         "pomodorini ciliegino",
-        "pomodori ciliegino"
+        "pomodori ciliegino",
+        "pomodori datterino"
       ],
       "en": [
         "tomato",
@@ -132,7 +133,8 @@
   "2301103": {
     "name": "Peberfrugt rød 1 stk.",
     "rules": {
-      "gramsPerItem": 100
+      "gramsPerItem": 100,
+      "defaultUnit": "g"
     },
     "aliases": {
       "it": ["peperone rosso", "peperoni rossi", "peperone", "peperoni"],
@@ -160,6 +162,7 @@
   },
   "2301108": {
     "name": "Rødløg 1 kg",
+    "url": "https://www.nemlig.com/roedloeg-2301108",
     "rules": {
       "form": "fresh",
       "substitutionAliases": [
@@ -273,6 +276,7 @@
   },
   "5001729": {
     "name": "Citrongræs 50 g",
+    "url": "https://www.nemlig.com/citrongraes-5001729",
     "rules": {
       "form": "fresh"
     },
@@ -305,7 +309,8 @@
       "es": ["berenjena", "berenjenas"]
     },
     "rules": {
-      "gramsPerItem": 300
+      "gramsPerItem": 300,
+      "defaultUnit": "g"
     }
   },
   "5004946": {
@@ -351,7 +356,7 @@
   "5007029": {
     "name": "Bacon i tern 150 g",
     "aliases": {
-      "it": ["guanciale", "pancetta"],
+      "it": ["guanciale", "pancetta", "pancetta di maiale"],
       "en": ["bacon", "diced bacon"],
       "da": ["bacon", "bacon i tern"],
       "es": ["beicon", "panceta"]
@@ -359,6 +364,7 @@
   },
   "5008330": {
     "name": "Grøntsagsfond 4 x 28 g",
+    "url": "https://www.nemlig.com/groentsagsfond-5008330",
     "rules": {
       "preparedYieldMl": 2000
     },
@@ -394,6 +400,7 @@
   },
   "5010800": {
     "name": "Champignon 500 g",
+    "url": "https://www.nemlig.com/champignon-5010800",
     "rules": {
       "form": "fresh",
       "allowDried": true
@@ -458,6 +465,7 @@
   },
   "5012402": {
     "name": "Koriander 50 g",
+    "url": "https://www.nemlig.com/koriander-5012402",
     "rules": {
       "form": "fresh"
     },
@@ -478,6 +486,7 @@
   },
   "5013728": {
     "name": "Fiskesauce 0,20 l",
+    "url": "https://www.nemlig.com/fiskesauce-5013728",
     "aliases": {
       "it": ["salsa di pesce"],
       "en": ["fish sauce"],
@@ -536,6 +545,7 @@
   },
   "5027931": {
     "name": "Basilikum Grøn øko. 10,5 cm pt.",
+    "url": "https://www.nemlig.com/basilikum-groen-oeko-5027931",
     "pack": {
       "amount": 1,
       "unit": "count"
@@ -552,6 +562,7 @@
   },
   "5027935": {
     "name": "Timian øko. 10,5 cm pt.",
+    "url": "https://www.nemlig.com/timian-oeko-5027935",
     "pack": {
       "amount": 1,
       "unit": "count"
@@ -570,7 +581,8 @@
     "name": "Courgette / squash øko. 1 stk.",
     "rules": {
       "form": "fresh",
-      "gramsPerItem": 350
+      "gramsPerItem": 350,
+      "defaultUnit": "g"
     },
     "aliases": {
       "it": ["zucchina", "zucchine"],
@@ -747,6 +759,7 @@
   },
   "5047224": {
     "name": "Limesaft øko. 0,25 l",
+    "url": "https://www.nemlig.com/limesaft-oeko-5047224",
     "aliases": {
       "it": [
         "limone",
@@ -1015,6 +1028,7 @@
   },
   "5060793": {
     "name": "Alternativ t. madlavningsfløde 0,33 l",
+    "url": "https://www.nemlig.com/alternativ-t-madlavningsfloede-5060793",
     "aliases": {
       "it": ["panna da cucina"],
       "en": ["cooking cream", "single cream", "cream for cooking"],
@@ -1088,6 +1102,7 @@
   },
   "5064676": {
     "name": "Grana Padano 200 g",
+    "url": "https://www.nemlig.com/grana-padano-5064676",
     "aliases": {
       "it": [
         "grana padano",
@@ -1165,7 +1180,12 @@
       "form": "canned"
     },
     "aliases": {
-      "it": ["pomodori in scatola", "pomodori tritati", "pomodori a pezzi"],
+      "it": [
+        "pomodori in scatola",
+        "pomodori tritati",
+        "pomodori a pezzi",
+        "polpa di pomodoro"
+      ],
       "en": [
         "canned tomatoes",
         "tinned tomatoes",
@@ -1339,8 +1359,21 @@
   "5602879": {
     "name": "Frilandsæg str. M/L 8 stk.",
     "aliases": {
-      "it": ["uovo", "uova", "uova da allevamento all'aperto"],
-      "en": ["egg", "eggs", "free range eggs", "free-range eggs"],
+      "it": [
+        "uovo",
+        "uova",
+        "uova da allevamento all'aperto",
+        "tuorlo",
+        "tuorli"
+      ],
+      "en": [
+        "egg",
+        "eggs",
+        "free range eggs",
+        "free-range eggs",
+        "egg yolk",
+        "egg yolks"
+      ],
       "da": ["æg", "frilandsæg"],
       "es": ["huevo", "huevos"]
     }
@@ -1360,6 +1393,195 @@
       "it": ["latte di cocco", "latte di cocco light"],
       "en": ["coconut milk", "light coconut milk"],
       "da": ["kokosmælk", "let kokosmælk"]
+    }
+  },
+  "5055603": {
+    "name": "Chili flager 90 g",
+    "url": "https://www.nemlig.com/chili-flager-5055603",
+    "rules": {
+      "form": "dried"
+    },
+    "aliases": {
+      "it": ["peperoncino rosso secco", "peperoncino secco"],
+      "en": [
+        "dried red chilli",
+        "dried red chili",
+        "chilli flakes",
+        "chili flakes"
+      ],
+      "da": ["chiliflager", "chili flager"]
+    }
+  },
+  "5061570": {
+    "name": "Kaffir limeblade 10 g",
+    "url": "https://www.nemlig.com/kaffir-limeblade-5061570",
+    "rules": {
+      "form": "dried"
+    },
+    "aliases": {
+      "it": ["foglie di lime kaffir"],
+      "en": ["kaffir lime leaves", "kaffir lime leaf"],
+      "da": ["kaffir limeblade"]
+    }
+  },
+  "5605626": {
+    "name": "Grøntsagsbouillon 10 stk.",
+    "url": "https://www.nemlig.com/groentsagsbouillon-5605626",
+    "pack": {
+      "amount": 10,
+      "unit": "count"
+    },
+    "notes": "Nemlig states 10 cubes / 100 g make 5 litres: one cube makes 0.5 litres. Kept separate from the saved stock pots.",
+    "aliases": {
+      "it": ["dado per brodo vegetale (dose per 0,5 l)"],
+      "en": ["vegetable stock cube for 500 ml"],
+      "da": ["grøntsagsbouillonterning til 0,5 l"]
+    }
+  },
+  "5012405": {
+    "name": "Basilikum 50 g",
+    "url": "https://www.nemlig.com/basilikum-5012405",
+    "rules": {
+      "form": "fresh"
+    },
+    "aliases": {
+      "it": ["basilico fresco in foglie"],
+      "en": ["fresh basil leaves"],
+      "da": ["friske basilikumblade"]
+    }
+  },
+  "5603266": {
+    "name": "Hønsebouillon øko. 80 g",
+    "url": "https://www.nemlig.com/hoensebouillon-oeko-5603266",
+    "aliases": {
+      "it": ["brodo di pollo in polvere"],
+      "en": [
+        "chicken stock powder",
+        "chicken bouillon powder",
+        "chicken stock granules"
+      ],
+      "da": ["hønsebouillon pulver", "hønsebouillon granulat"]
+    }
+  },
+  "5063928": {
+    "name": "Sorte oliven u. sten 350 g",
+    "url": "https://www.nemlig.com/sorte-oliven-u-sten-5063928",
+    "pack": {
+      "amount": 170,
+      "unit": "g"
+    },
+    "notes": "Pack amount is drained weight. Pieces per jar are not stated; count requirements remain unresolved.",
+    "aliases": {
+      "it": ["olive nere"],
+      "en": ["black olives", "pitted black olives"],
+      "da": ["sorte oliven", "sorte oliven uden sten"]
+    }
+  },
+  "5015534": {
+    "name": "Pistacienødder u. skal øko. 50 g",
+    "url": "https://www.nemlig.com/pistacienoedder-u-skal-oeko-5015534",
+    "notes": "Approved 2026-11-02: unsalted shelled kernels; user removes skins for recipes requesting spellati.",
+    "aliases": {
+      "it": ["pistacchi", "pistacchi al naturale, sgusciati e spellati"],
+      "en": ["unsalted shelled pistachios", "shelled pistachios"],
+      "da": ["pistacienødder uden skal", "pistacienødder u. skal"]
+    }
+  },
+  "5603147": {
+    "name": "Borlotti bønner øko. 390 g",
+    "url": "https://www.nemlig.com/borlotti-boenner-oeko-5603147",
+    "pack": {
+      "amount": 230,
+      "unit": "g"
+    },
+    "rules": {
+      "form": "canned"
+    },
+    "notes": "Approved 2026-11-02: cooked beans; pack amount is drained weight, not the 390 g total weight.",
+    "aliases": {
+      "it": ["fagioli borlotti", "fagioli borlotti cotti"],
+      "en": ["borlotti beans", "cooked borlotti beans"],
+      "da": ["borlotti bønner", "borlottibønner"]
+    }
+  },
+  "5065559": {
+    "name": "Kapers 100 g",
+    "url": "https://www.nemlig.com/kapers-5065559",
+    "pack": {
+      "amount": 60,
+      "unit": "g"
+    },
+    "notes": "Approved 2026-11-02: vinegar-brined capers substitute for capperi sotto sale; pack amount is drained weight.",
+    "aliases": {
+      "it": ["capperi", "capperi sotto sale"],
+      "en": ["capers", "capers in vinegar"],
+      "da": ["kapers"]
+    }
+  },
+  "5016560": {
+    "name": "Ingefær øko. 200 g",
+    "url": "https://www.nemlig.com/ingefaer-oeko-5016560",
+    "rules": {
+      "form": "fresh"
+    },
+    "aliases": {
+      "it": ["zenzero fresco"],
+      "en": ["fresh ginger"],
+      "da": ["frisk ingefær"]
+    }
+  },
+  "5012403": {
+    "name": "Rosmarin 50 g",
+    "url": "https://www.nemlig.com/rosmarin-5012403",
+    "rules": {
+      "form": "fresh"
+    },
+    "aliases": {
+      "it": ["rosmarino"],
+      "en": ["rosemary"],
+      "da": ["rosmarin"]
+    }
+  },
+  "5003207": {
+    "name": "Persille bredbladet 180 g",
+    "url": "https://www.nemlig.com/persille-bredbladet-5003207",
+    "rules": {
+      "form": "fresh"
+    },
+    "aliases": {
+      "it": ["prezzemolo"],
+      "en": ["parsley", "flat leaf parsley"],
+      "da": ["persille", "bredbladet persille", "persille bredbladet"]
+    }
+  },
+  "5029847": {
+    "name": "Pecorino Romano 200 g",
+    "url": "https://www.nemlig.com/pecorino-romano-5029847",
+    "aliases": {
+      "it": ["pecorino", "pecorino romano"],
+      "en": ["pecorino", "pecorino romano"],
+      "da": ["pecorino", "pecorino romano"]
+    }
+  },
+  "5602313": {
+    "name": "Tomatpassata 500 g",
+    "url": "https://www.nemlig.com/tomatpassata-5602313",
+    "aliases": {
+      "it": ["passata di pomodoro", "passata"],
+      "en": ["tomato passata", "passata"],
+      "da": ["tomatpassata"]
+    }
+  },
+  "5048583": {
+    "name": "Hokkaido øko. 1 stk.",
+    "url": "https://www.nemlig.com/hokkaido-oeko-5048583",
+    "rules": {
+      "form": "fresh"
+    },
+    "aliases": {
+      "it": ["zucca", "polpa di zucca"],
+      "en": ["pumpkin", "pumpkin flesh", "hokkaido"],
+      "da": ["græskar", "hokkaido"]
     }
   },
   "5605324": {

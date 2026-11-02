@@ -20,6 +20,82 @@ import {
 } from "../lib/approved-list.mjs";
 import { buildReview, parseList } from "../lib/groceries.mjs";
 
+test("Italian recipe units do not become counts of whole products", () => {
+  const text =
+    "4 cucchiai di Parmigiano Reggiano\n1 pizzico di peperoncino rosso secco\n1 rametto di rosmarino fresco\n4 foglie di basilico fresche";
+  assert.deepEqual(
+    parseList(text).map(({ unit }) => unit),
+    ["tbsp", "pinch", "sprig", "leaf"],
+  );
+  const products = JSON.parse(
+    readFileSync(new URL("../data/products.json", import.meta.url), "utf8"),
+  );
+  const basil = buildReview("4 foglie di basilico fresche", products);
+  assert.equal(basil.items.length, 0);
+  assert.match(
+    basil.unresolved[0].reason,
+    /No configured conversion from leaf/,
+  );
+});
+
+test("November recipe aliases preserve approved forms and drained pack quantities", () => {
+  const products = JSON.parse(
+    readFileSync(new URL("../data/products.json", import.meta.url), "utf8"),
+  );
+  const review = buildReview(
+    [
+      "40 g di pistacchi al naturale, sgusciati e spellati",
+      "450 g di fagioli borlotti",
+      "30 g di capperi sotto sale",
+      "900 g di pomodori datterino",
+      "5 g fresh ginger",
+      "10 g fresh basil leaves",
+      "10 g chicken stock powder",
+      "5 eggs",
+      "3 tuorli",
+      "15 - 20 g di funghi porcini secchi",
+      "20 olive nere",
+      "3 kaffir lime leaves",
+      "350 g di polpa di zucca",
+      "1 dado per brodo vegetale (dose per 0,5 l)",
+    ].join("\n"),
+    products,
+  );
+  for (const [sku, packages] of [
+    ["5015534", 1],
+    ["5603147", 2],
+    ["5065559", 1],
+    ["106499", 4],
+    ["5016560", 1],
+    ["5012405", 1],
+    ["5603266", 1],
+    ["5602879", 1],
+    ["5605626", 1],
+  ]) {
+    assert.equal(
+      review.items.find((item) => item.sku === sku)?.packages,
+      packages,
+    );
+  }
+  assert.equal(
+    review.items.find((item) => item.sku === "5603147").pack.amount,
+    230,
+  );
+  assert.equal(
+    review.items.find((item) => item.sku === "5065559").pack.amount,
+    60,
+  );
+  assert.equal(
+    review.items.find((item) => item.sku === "5602879").required.amount,
+    8,
+  );
+  assert.deepEqual(
+    review.unresolved.map((item) => item.candidateSkus[0]),
+    ["5010800", "5063928", "5061570", "5048583"],
+  );
+  assert.equal(buildReview("5 g ginger", products).items[0].sku, "5044360");
+});
+
 test("household report presents English actions before references without changing structured data", () => {
   const config = JSON.parse(
     readFileSync(
@@ -419,6 +495,34 @@ test("price comparison preserves approved supplied quantities without inventing 
   );
 });
 
+test("metric cooking spoons convert to volume without assuming density or leaf weight", () => {
+  const dictionary = {
+    liquid: {
+      name: "Liquid 100 ml",
+      aliases: { en: ["liquid"] },
+    },
+    powder: {
+      name: "Powder 100 g",
+      aliases: { en: ["powder"] },
+    },
+    herb: {
+      name: "Basil 50 g",
+      aliases: { en: ["basil"] },
+    },
+  };
+  const liquid = buildReview("2 tbsp liquid\n3 tsp liquid", dictionary);
+  assert.equal(liquid.items[0].required.amount, 45);
+  assert.equal(liquid.items[0].estimated, false);
+  assert.equal(liquid.items[0].requirements[0].original, "2 tbsp liquid");
+  assert.equal(buildReview("2 tbsp powder", dictionary).items.length, 0);
+  assert.equal(buildReview("4 leaves basil", dictionary).items.length, 0);
+  assert.equal(buildReview("30 g liquid", dictionary).items.length, 0);
+  dictionary.powder.rules = { gramsPerMl: 0.5 };
+  const powder = buildReview("2 tbsp powder", dictionary);
+  assert.equal(powder.items[0].required.amount, 15);
+  assert.equal(powder.items[0].estimated, true);
+});
+
 test("weight-volume conversion uses explicit estimates only", () => {
   const dictionary = {
     liquid: {
@@ -802,7 +906,7 @@ test("approved concentrated tomato puree uses its own 140 g pack", () => {
     assert.equal(item.requirements[0].original, `95 g ${alias}`);
   }
   assert.equal(itemFor("150 g tomato paste", "5602312").packages, 2);
-  assert.equal(buildReview("100 g passata", products).items.length, 0);
+  assert.equal(itemFor("100 g passata", "5602313").packages, 1);
 });
 
 test("approved champignons replace dried mushrooms without treating dried grams as fresh grams", () => {
