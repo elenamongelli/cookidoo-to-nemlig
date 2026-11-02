@@ -2,7 +2,7 @@
 
 Source: the user's pasted 44-requirement list, without an invoice. No shopping-list file, invoice, household state or fingerprinted approval plan was changed. Catalogue observations are from Nemlig on 2026-11-02 without a delivery address/date; availability is provisional. This is product/pack verification, not a price comparison or a complete basket quote.
 
-All 44 requirements have an identified product. The offline engine resolves 29 requirements into 27 product groups; 15 requirements remain quantity-uncertain and outside the import link. Source wording below is retained from the message; no saved-list line numbers or fingerprints are asserted.
+All 44 requirements have an identified product. After the chart-backed estimates below, the offline engine resolves 32 requirements into 29 product groups; 12 requirements remain quantity-uncertain and outside the import link. Source wording below is retained from the message; no saved-list line numbers or fingerprints are asserted.
 
 ## Verified Pack Facts And Approvals
 
@@ -25,15 +25,24 @@ All 44 requirements have an identified product. The offline engine resolves 29 r
 
 Other resolved requirements retain existing mappings: 120 g di Parmigiano Reggiano (Grana Padano), 200 g prawns (frozen), 100 g beef tenderloin, 100 g fresh baby corns, 15 g red curry paste, 30 g di carota, 165 g di cipolla, 300 g di melanzane, 200 g di peperoni rossi, 3 stalks fresh lemongrass, 3 fresh red chillies, 8.333 - 9.333 garlic cloves, and 1000 g zucchinis. Existing vegetable/garlic weight estimates and the saved three-stalk lemongrass pack assumption were preserved, not re-established as live guarantees. Requirements use range upper bounds before pack rounding.
 
+## Chart-Backed Quantity Estimates
+
+Source: the user pasted the [King Arthur Ingredient Weight Chart](https://www.kingarthurbaking.com/learn/ingredient-weight-chart). Its butter entry equates eight tablespoons to half a cup. We use 16 metric tablespoons per cup, or 240 ml, consistently with the configured 15 ml tablespoon. These are cooking estimates and proxies, not measured densities for these Nemlig products; the review marks all three estimated.
+
+| Source requirement | Configured relationship | Result |
+| --- | --- | --- |
+| 30 g lime juice | Chart key lime juice: 227 g per cup; 227/240 g/ml, used as a proxy for bottled lime juice | About 31.72 ml; 1 x 250 ml. |
+| 80 g cooking cream | Chart cream: 227 g per cup; 227/240 g/ml, used as a proxy for the saved AMA cream alternative | About 84.58 ml; 1 x 330 ml. |
+| 4 cucchiai di Parmigiano Reggiano | Chart grated Parmesan: 50 g per half cup; 50/120 g/ml, applied to the saved Grana Padano substitute in grated form | 25 g; combined with the separate 120 g requirement gives 145 g, covered by 1 x 200 g. |
+
+No fruit/zest yield, whole-olive weight, pumpkin flesh yield or leaf/sprig yield can be inferred from this chart. Sliced olives, diced celery, sliced shallots and pumpkin puree are not evidence for the missing whole-item relationships below.
+
 ## Add Manually - Quantity Uncertain
 
 Choose quantities and add these yourself. No guessed densities, spoon weights, leaf/stalk weights, edible yields or dried-to-fresh ratios were saved. Some may share a purchase with resolved requirements, but their coverage is not asserted and they remain outside the import link.
 
 | Original source requirement          | Verified direct product link                                                                            | Missing relationship                                                                                                                                                                                      |
 | ------------------------------------ | ------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 30 g lime juice                      | [Limesaft 250 ml](https://www.nemlig.com/limesaft-oeko-5047224)                                         | Product-specific g/ml conversion.                                                                                                                                                                         |
-| 80 g cooking cream                   | [Saved cooking-cream alternative 330 ml](https://www.nemlig.com/alternativ-t-madlavningsfloede-5060793) | Product-specific g/ml conversion. Existing saved alternative retained.                                                                                                                                    |
-| 4 cucchiai di Parmigiano Reggiano    | [Saved Grana Padano 200 g](https://www.nemlig.com/grana-padano-5064676)                                 | Tablespoon-to-weight depends on grated form and packing. Separate 120 g requirement resolves using the saved choice.                                                                                      |
 | 15 - 20 g di funghi porcini secchi   | [Fresh champignons 500 g](https://www.nemlig.com/champignon-5010800)                                    | User explicitly retained fresh champignons; no approved dried-to-fresh quantity ratio. Actual [dried porcini 20 g](https://www.nemlig.com/toerrede-karl-johan-svampe-5022060) was found but not selected. |
 | 20 olive nere                        | [Black pitted olives 350 g / 170 g drained](https://www.nemlig.com/sorte-oliven-u-sten-5063928)         | Olives per jar / weight per olive not stated.                                                                                                                                                             |
 | 1 pizzico di peperoncino rosso secco | [Dried chilli flakes 90 g](https://www.nemlig.com/chili-flager-5055603)                                 | Pinch-to-weight conversion.                                                                                                                                                                               |

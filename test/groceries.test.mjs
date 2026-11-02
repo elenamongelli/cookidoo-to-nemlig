@@ -20,6 +20,42 @@ import {
 } from "../lib/approved-list.mjs";
 import { buildReview, parseList } from "../lib/groceries.mjs";
 
+test("identified products with uncertain quantities remain distinct from missing or unsuitable products", () => {
+  const products = JSON.parse(
+    readFileSync(new URL("../data/products.json", import.meta.url), "utf8"),
+  );
+  delete products["5047224"].rules;
+  const review = buildReview(
+    "30 g lime juice\n10 g unknown ingredient\n5 g fresh chilli flakes",
+    products,
+  );
+  const [quantity, missing, unsuitable] = review.unresolved;
+  assert.equal(quantity.quantityUncertain, true);
+  assert.equal(quantity.productName, products["5047224"].name);
+  assert.equal(quantity.productUrl, products["5047224"].url);
+  assert.equal(quantity.line, 1);
+  assert.equal(quantity.original, "30 g lime juice");
+  assert.equal(missing.quantityUncertain, undefined);
+  assert.equal(unsuitable.quantityUncertain, undefined);
+  assert.equal(review.items.length, 0);
+});
+
+test("the supplied ingredient chart resolves lime juice, cream and grated cheese as estimates", () => {
+  const products = JSON.parse(
+    readFileSync(new URL("../data/products.json", import.meta.url), "utf8"),
+  );
+  const review = buildReview(
+    "30 g lime juice\n80 g cooking cream\n4 cucchiai di Parmigiano Reggiano\n120 g di Parmigiano Reggiano",
+    products,
+  );
+  assert.equal(review.unresolved.length, 0);
+  assert.equal(review.items.length, 3);
+  assert.ok(review.items.every((item) => item.estimated && item.packages === 1));
+  assert.equal(review.items.find((item) => item.sku === "5064676").required.amount, 145);
+  assert.ok(Math.abs(review.items.find((item) => item.sku === "5047224").required.amount - 30 * 240 / 227) < 1e-10);
+  assert.ok(Math.abs(review.items.find((item) => item.sku === "5060793").required.amount - 80 * 240 / 227) < 1e-10);
+});
+
 test("Italian recipe units do not become counts of whole products", () => {
   const text =
     "4 cucchiai di Parmigiano Reggiano\n1 pizzico di peperoncino rosso secco\n1 rametto di rosmarino fresco\n4 foglie di basilico fresche";
@@ -637,7 +673,7 @@ test("approved seeds, cranberries, and smaller coconut water have multilingual a
   }
 });
 
-test("cooking cream uses the approved AMA alternative without assuming a density", () => {
+test("cooking cream uses the approved AMA alternative with the configured cream-density proxy", () => {
   for (const ingredient of [
     "panna da cucina",
     "cooking cream",
@@ -650,9 +686,10 @@ test("cooking cream uses the approved AMA alternative without assuming a density
     assert.equal(item.packages, 2);
   }
   const review = buildReview("550 - 600 g single cream", products);
-  assert.equal(review.items.length, 0);
-  assert.deepEqual(review.unresolved[0].candidateSkus, ["5060793"]);
-  assert.match(review.unresolved[0].reason, /No configured conversion/);
+  assert.equal(review.unresolved.length, 0);
+  assert.equal(review.items[0].sku, "5060793");
+  assert.equal(review.items[0].packages, 2);
+  assert.equal(review.items[0].estimated, true);
   assert.equal(buildReview("300 ml whipping cream", products).items.length, 0);
 });
 

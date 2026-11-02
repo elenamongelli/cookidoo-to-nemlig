@@ -5,8 +5,87 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import test from "node:test";
 import { pathToFileURL } from "node:url";
+import { createContext, runInContext } from "node:vm";
 import { buildReviewForInput } from "../lib/approved-list.mjs";
 import { createReviewServer } from "../server.mjs";
+
+test("website separates missing matches from uncertain quantities and renders manual links", async () => {
+  const products = JSON.parse(
+    await readFile(new URL("../data/products.json", import.meta.url), "utf8"),
+  );
+  delete products["5047224"].rules;
+  const review = buildReviewForInput(
+    "30 g lime juice\n1 unknown ingredient",
+    products,
+    {},
+  );
+  const elements = new Map();
+  const makeElement = (tag) => ({
+    tag,
+    children: [],
+    value: "",
+    append(...children) {
+      this.children.push(...children);
+    },
+    replaceChildren(...children) {
+      this.children = children;
+    },
+    setAttribute() {},
+    get firstChild() {
+      return this.children[0];
+    },
+  });
+  const context = createContext({
+    reviewData: review,
+    document: {
+      getElementById(id) {
+        if (!elements.has(id)) elements.set(id, makeElement("div"));
+        return elements.get(id);
+      },
+      querySelectorAll: () => [],
+      createElement: makeElement,
+    },
+  });
+  const source = await readFile(
+    new URL("../web/app.js", import.meta.url),
+    "utf8",
+  );
+  runInContext(
+    source.slice(0, source.indexOf("async function requestJson")),
+    context,
+  );
+  runInContext(
+    'review = reviewData; activeTab = "quantities"; renderReview();',
+    context,
+  );
+  assert.equal(elements.get("stat-missing").textContent, "1");
+  assert.equal(elements.get("count-missing").textContent, "1");
+  assert.equal(elements.get("count-quantities").textContent, "1");
+  const descendants = (element) => [
+    element,
+    ...element.children.flatMap(descendants),
+  ];
+  const links = descendants(elements.get("results")).filter(
+    (element) => element.tag === "a",
+  );
+  assert.equal(links.length, 1);
+  assert.equal(links[0].href, products["5047224"].url);
+  runInContext('activeTab = "missing"; renderResults();', context);
+  assert.equal(
+    descendants(elements.get("results")).filter(
+      (element) => element.tag === "article",
+    ).length,
+    1,
+  );
+  review.unresolved[0].productUrl = "https://unrelated.example/product";
+  runInContext('activeTab = "quantities"; renderResults();', context);
+  assert.equal(
+    descendants(elements.get("results")).filter(
+      (element) => element.tag === "a",
+    ).length,
+    0,
+  );
+});
 
 test("website reviews save dated versions without changing source data", async (context) => {
   const directory = await mkdtemp(join(tmpdir(), "shopping-review-"));

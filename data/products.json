@@ -760,6 +760,10 @@
   "5047224": {
     "name": "Limesaft øko. 0,25 l",
     "url": "https://www.nemlig.com/limesaft-oeko-5047224",
+    "rules": {
+      "gramsPerMl": 0.9458333333333333
+    },
+    "notes": "User-supplied King Arthur ingredient chart: key lime juice 227 g per cup. Cooking estimate uses a 240 ml cup and applies key lime juice as a proxy for this bottled lime juice; not a measured product density or fruit/zest yield.",
     "aliases": {
       "it": [
         "limone",
@@ -1029,6 +1033,10 @@
   "5060793": {
     "name": "Alternativ t. madlavningsfløde 0,33 l",
     "url": "https://www.nemlig.com/alternativ-t-madlavningsfloede-5060793",
+    "rules": {
+      "gramsPerMl": 0.9458333333333333
+    },
+    "notes": "User-supplied King Arthur ingredient chart: cream 227 g per cup. Cooking estimate uses a 240 ml cup and ordinary cream as a proxy for the saved AMA cream alternative; not a measured product density.",
     "aliases": {
       "it": ["panna da cucina"],
       "en": ["cooking cream", "single cream", "cream for cooking"],
@@ -1103,6 +1111,10 @@
   "5064676": {
     "name": "Grana Padano 200 g",
     "url": "https://www.nemlig.com/grana-padano-5064676",
+    "rules": {
+      "gramsPerMl": 0.4166666666666667
+    },
+    "notes": "User-supplied King Arthur ingredient chart: grated Parmesan 50 g per half cup. Cooking estimate uses a 240 ml cup (120 ml per half cup), applied to the saved Grana Padano substitute when spoon-measured; not a measured product density.",
     "aliases": {
       "it": [
         "grana padano",

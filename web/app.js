@@ -42,7 +42,7 @@ function updateEditor() {
     reviewedText = null;
     for (const name of ["lines", "products", "missing"])
       element(`stat-${name}`).textContent = "0";
-    for (const name of ["products", "missing"])
+    for (const name of ["products", "missing", "quantities"])
       element(`count-${name}`).textContent = "0";
     search.value = "";
     search.disabled = true;
@@ -133,6 +133,24 @@ function issueRow(requirement) {
     node("h3", "", requirement.original),
     node("p", "", requirement.reason),
   );
+  if (requirement.quantityUncertain) {
+    content.append(node("span", "tag estimated", "Quantity uncertain"));
+    if (
+      /^https:\/\/(?:www\.)?nemlig\.com\/[a-z0-9-]+-\d+$/i.test(
+        requirement.productUrl ?? "",
+      )
+    ) {
+      const link = node("a", "", requirement.productName);
+      link.href = requirement.productUrl;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      const product = node("p");
+      product.append(link);
+      content.append(product);
+    } else {
+      content.append(node("p", "", requirement.productName));
+    }
+  }
   row.append(node("span", "issue-line", `Line ${requirement.line}`), content);
   return row;
 }
@@ -150,7 +168,13 @@ function emptyState(title, description) {
 
 function renderResults() {
   if (!review) return;
-  const all = activeTab === "products" ? review.items : review.unresolved;
+  const all =
+    activeTab === "products"
+      ? review.items
+      : review.unresolved.filter(
+          (item) =>
+            Boolean(item.quantityUncertain) === (activeTab === "quantities"),
+        );
   const query = search.value.trim().toLocaleLowerCase();
   const filtered = all.filter((item) => {
     const text =
@@ -163,7 +187,7 @@ function renderResults() {
             ),
             ...item.substitutions,
           ].join(" ")
-        : `${item.line} ${item.original} ${item.reason}`;
+        : `${item.line} ${item.original} ${item.reason} ${item.productName ?? ""}`;
     return text.toLocaleLowerCase().includes(query);
   });
   results.replaceChildren();
@@ -173,7 +197,16 @@ function renderResults() {
       node(
         "p",
         "section-note",
-        "These ingredients are not in the Nemlig link. No suitable saved match or conversion was found.",
+        "These ingredients have no confirmed suitable match and are not in the Nemlig link.",
+      ),
+    );
+  if (activeTab === "quantities" && all.length)
+    results.append(
+      node("h3", "section-note", "Add manually - quantity uncertain"),
+      node(
+        "p",
+        "section-note",
+        "Products found; required quantities are not confirmed or included in the Nemlig link.",
       ),
     );
   if (filtered.length && activeTab === "products") {
@@ -194,9 +227,16 @@ function renderResults() {
     const messages = {
       products: [
         "No resolved products",
-        "Unmatched ingredients remain in Missing.",
+        "Check Missing and Choose quantity for unresolved ingredients.",
       ],
-      missing: ["Nothing missing", "No unresolved ingredients in this review."],
+      missing: [
+        "No missing matches",
+        "Every ingredient has a confirmed product match.",
+      ],
+      quantities: [
+        "No uncertain quantities",
+        "No quantities need manual review.",
+      ],
     };
     results.append(
       emptyState(
@@ -221,12 +261,15 @@ function renderReview() {
   const counts = {
     lines: review.requirementCount,
     products: review.items.length,
-    missing: review.unresolved.length,
+    missing: review.unresolved.filter((item) => !item.quantityUncertain).length,
   };
   for (const [key, value] of Object.entries(counts))
     element(`stat-${key}`).textContent = String(value);
   element("count-products").textContent = String(review.items.length);
-  element("count-missing").textContent = String(review.unresolved.length);
+  element("count-missing").textContent = String(counts.missing);
+  element("count-quantities").textContent = String(
+    review.unresolved.filter((item) => item.quantityUncertain).length,
+  );
   const planNotice =
     review.planNotice ===
     "Approved plan not applied: shopping-list text differs from the reviewed list."
@@ -396,7 +439,7 @@ element("open").addEventListener("click", () => {
   if (!currentReview() || !review.importUrl) return;
   element("confirm-open").href = review.importUrl;
   element("dialog-summary").textContent =
-    `${plural(review.items.length, "product")} included. ${plural(review.unresolved.length, "missing ingredient")} not in the link.`;
+    `${plural(review.items.length, "product")} included. ${plural(review.unresolved.filter((item) => !item.quantityUncertain).length, "missing match")} and ${plural(review.unresolved.filter((item) => item.quantityUncertain).length, "quantity-uncertain ingredient")} not in the link.`;
   dialog.showModal();
   element("cancel-open").focus();
 });

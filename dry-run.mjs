@@ -31,6 +31,12 @@ async function main() {
 }
 
 function printReview(review) {
+  const quantityUncertain = review.unresolved.filter(
+    (requirement) => requirement.quantityUncertain,
+  );
+  const missing = review.unresolved.filter(
+    (requirement) => !requirement.quantityUncertain,
+  );
   const matchedCount = review.items.reduce(
     (total, item) => total + item.requirements.length,
     0,
@@ -42,7 +48,7 @@ function printReview(review) {
   console.log("OFFLINE REVIEW - no network or basket changes.");
   if (review.planNotice) console.log(`${review.planNotice}\n`);
   console.log(
-    `${review.requirementCount} lines | ${review.items.length} products | ${packageCount} units | ${review.excluded.length} excluded | ${review.unresolved.length} missing`,
+    `${review.requirementCount} lines | ${review.items.length} products | ${packageCount} units | ${review.excluded.length} excluded | ${missing.length} missing | ${quantityUncertain.length} quantity uncertain`,
   );
 
   if (review.items.length) console.log("\nProducts to include:");
@@ -67,10 +73,19 @@ function printReview(review) {
         `- Line ${requirement.line}: ${requirement.original} - ${requirement.reason}`,
       );
   }
-  if (review.unresolved.length) {
+  if (missing.length) {
     console.log("\nMissing (not in the link):");
-    for (const requirement of review.unresolved) {
+    for (const requirement of missing) {
       console.log(`- Line ${requirement.line}: ${requirement.original}`);
+      console.log(`  Reason: ${requirement.reason}`);
+    }
+  }
+  if (quantityUncertain.length) {
+    console.log("\nAdd manually - quantity uncertain (not in the link):");
+    for (const requirement of quantityUncertain) {
+      console.log(`- Line ${requirement.line}: ${requirement.original}`);
+      console.log(`  Product found: ${requirement.productName}`);
+      if (requirement.productUrl) console.log(`  ${requirement.productUrl}`);
       console.log(`  Reason: ${requirement.reason}`);
     }
   }
