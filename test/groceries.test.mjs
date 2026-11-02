@@ -50,10 +50,25 @@ test("the supplied ingredient chart resolves lime juice, cream and grated cheese
   );
   assert.equal(review.unresolved.length, 0);
   assert.equal(review.items.length, 3);
-  assert.ok(review.items.every((item) => item.estimated && item.packages === 1));
-  assert.equal(review.items.find((item) => item.sku === "5064676").required.amount, 145);
-  assert.ok(Math.abs(review.items.find((item) => item.sku === "5047224").required.amount - 30 * 240 / 227) < 1e-10);
-  assert.ok(Math.abs(review.items.find((item) => item.sku === "5060793").required.amount - 80 * 240 / 227) < 1e-10);
+  assert.ok(
+    review.items.every((item) => item.estimated && item.packages === 1),
+  );
+  assert.equal(
+    review.items.find((item) => item.sku === "5064676").required.amount,
+    145,
+  );
+  assert.ok(
+    Math.abs(
+      review.items.find((item) => item.sku === "5047224").required.amount -
+        (30 * 240) / 227,
+    ) < 1e-10,
+  );
+  assert.ok(
+    Math.abs(
+      review.items.find((item) => item.sku === "5060793").required.amount -
+        (80 * 240) / 227,
+    ) < 1e-10,
+  );
 });
 
 test("Italian recipe units do not become counts of whole products", () => {
